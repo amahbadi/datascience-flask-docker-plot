@@ -1,5 +1,5 @@
 #--------ALI AKBAR MAHBADI :aamahbadi@yahoo.com----------
-from app import *
+from app import Flask, render_template, csv, os, plt, pd, np, BytesIO, base64
 
 
 count = 0

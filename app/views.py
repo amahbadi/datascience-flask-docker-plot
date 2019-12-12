@@ -1,5 +1,5 @@
 #--------ALI AKBAR MAHBADI :aamahbadi@yahoo.com----------
-from app import Flask, render_template, csv, os, plt, pd, np, BytesIO, base64
+from app import app,Flask, render_template, csv, os, plt, pd, np, BytesIO, base64
 
 
 count = 0
@@ -20,7 +20,7 @@ def get_plot_data(field_name, list_data):
     field = list(np.array(list_data[field_name]))
     mu , sigma = np.mean(field), np.std(field)
     plt.figure()
-    n, bins, patches = plt.hist(field, 50, density=True, facecolor='#FF1744', alpha=0.75)
+    plt.hist(field, 50, density=True, facecolor='#FF1744', alpha=0.75)
     plt.xlabel(field_name)
     plt.ylabel('Probability')
     plt.title('Histogram of %s' %(field_name))

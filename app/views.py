@@ -49,6 +49,3 @@ def home():
     for i in iter_file:
         list_titanic.append(i.strip().split(','))
     return render_template('table.html', for_i = list_titanic)
-
-if __name__ == "__main__":
-    app.run(debug=True)
